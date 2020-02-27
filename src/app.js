@@ -5,7 +5,7 @@ let currentTeam = "Manchester FC";
 let trophiesWon = 27;
 
 //Write your function here
-function createManager(){
+function createManager(managerName, managerAge, currentTeam, trophiesWon){
   var arr = [managerName, managerAge, currentTeam, trophiesWon]
   return arr;
 }
@@ -26,7 +26,10 @@ try {
 var formation = [4, 4, 3];
 
 //write your function here
-function creativeFormation(){
+function createFormation(formation){
+	if (formation.length == 0){
+		return null;
+	}
   var form = {defender:formation[0], midfield:formation[1], forward:formation[2]};
   return form;
 }
@@ -44,7 +47,7 @@ function filterByDebut(year){
   var deb = [],j=0;
   for(i=0;i<players.length; i++)
   { if(year==players[i]["debut"])
-    { deb[j] = players[i]["name"];
+    { deb[j] = players[i];
      j++;
     }
   }
@@ -56,7 +59,7 @@ function filterByPosition(position){
   var po = [], j=0;
   for(i=0;i<players.length; i++)
   { if(position==players[i]["position"])
-    { po[j] = players[i]["name"];
+    { po[j] = players[i];
      j++;
     }
   }
@@ -69,7 +72,7 @@ function filterByAward(awardName){
   for(i=0;i<players.length; i++)
   {for(k=0; k<players[i]["awards"].length; k++)
   { if(awardName==players[i]["awards"][k]["name"])
-    { aw[j] = players[i]["name"];
+    { aw[j] = players[i];
      j++;
     }
   }}
@@ -87,7 +90,7 @@ function filterByAwardxTimes(awardName, noOfTimes){
     }
   }
    if(noOfTimes==awc){
-     aw[j] = players[i]["name"];
+     aw[j] = players[i];
      j++;
    }
     }
@@ -95,12 +98,12 @@ function filterByAwardxTimes(awardName, noOfTimes){
 }
 
 //Progression 7 - Filter players that won ______ award and belong to ______ country
-function filterByAwardxcountry(awardName, country){
+function filterByAwardxCountry(awardName, country){
   var aw = [], j=0;
   for(i=0;i<players.length; i++)
   {for(k=0; k<players[i]["awards"].length; k++)
   { if(awardName==players[i]["awards"][k]["name"] && country==players[i]["country"])
-    { aw[j] = players[i]["name"];
+    { aw[j] = players[i];
      j++;
      break;
     }
@@ -113,7 +116,7 @@ function filterByNoOfAwardsxTeamxAge(noOfAwards, team, age){
   var aw = [], j=0;
   for(i=0;i<players.length; i++)
   {if(noOfAwards<=players[i]["awards"].length && team==players[i]["team"] && age>players[i]["age"])
-   {aw[j]=players[i]["name"];}
+   {aw[j]=players[i];}
   }
   return aw;
 }
