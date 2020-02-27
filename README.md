@@ -26,7 +26,7 @@ And finally, create a pull request so your ProGrad Mentor (PM) can review your w
 
 ## Starter code
 
-The `src/data.js` contains an array of 250 players. We are talking about the array of 25 _objects_ containing the info about each player. Here is one example of how the data will be displayed:
+The `src/data.js` contains an array of 250 players. We are talking about the array of 250 _objects_ containing the info about each player. Here is one example of how the data will be displayed:
 
 ```javascript
 {
