@@ -51,13 +51,13 @@ try {
 //Progression 3 - Filter players that debuted in ___ year
 function filterByDebut(year)
 {
-  let playyr = [];
+  let player = [];
   for (let i = 0; i < players.length; i++) {
     if (players[i].debut == year) {
-      playyr.push(players[i]);
+      player.push(players[i]);
     }
   }
-  return playyr;
+  return player;
 }
 
 //Progression 4 - Filter players that play at the position _______
@@ -92,8 +92,10 @@ function filterByAward(awardName)
 
 //Progression 6 - Filter players that won ______ award ____ times
 function filterByAwardxTimes()
-{ let plyr = [];
-  return plyr }
+{
+  let player = [];
+  return player;
+}
 
 function filterByAwardxTimes(awardName, noOfTimes)
 {
@@ -119,28 +121,7 @@ function filterByAwardxTimes(awardName, noOfTimes)
   return player;
 }
 
-
 //Progression 7 - Filter players that won ______ award and belong to ______ country
-function filterByAwardxTimes(awardName,country){
-var player = [];
-  let count =0;
-  // let noOfTimes = 3;
-  players.forEach(function (item) {
-    item.awards.forEach(function (item) {
-      
-      if(item.name == awardName){
-         
-        count++;
-      }
-    });
-    if(item.country == country && count>=1){
-      player.push(item);
-    }
-    
-  });
-  return player;
-}
-
 
 
 
