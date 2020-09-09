@@ -159,6 +159,45 @@ function FilterByTeamxSortByNoOfAwards(team) {
   return sortedPlayers.reverse();
 }
 //Challenge 1 - Sort players that have won _______ award _____ times and belong to _______ country in alphabetical order of their names
-
+function SortByNamexAwardxTimes(awardName, noOfTimes, country) {
+  var playersList = [];
+  var sortedPlayers = [];
+  for (var i = 0; i < players.length; i++) {
+    for (var j = 0; j < players[i].awards.length; j++) {
+      if (
+        players[i].awards[j].name == awardName &&
+        players[i].awards.length >= noOfTimes &&
+        players[i].country == country
+      ) {
+        console.log("ex");
+        playersList.push(players[i]);
+      }
+    }
+  }
+  playersList.sort(function (a, b) {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return playersList;
+}
 //Challenge 2 - Sort players that are older than _____ years in alphabetical order
 //Sort the awards won by them in reverse chronological order
+function SortByNamexSortByNamexOlderThan(age) {
+  var playersList = [];
+  var sortedPlayers = [];
+  for (var i = 0; i < players.length; i++) {
+    if (player[i].age >= age) {
+      for (var j = 0; j < )
+
+    }
+
+
+  }
+  sortedPlayers = playersList.name.sort()
+  return sortedPlayers;
+}
