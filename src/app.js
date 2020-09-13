@@ -51,44 +51,44 @@ try {
 
 //Progression 3 - Filter players that debuted in ___ year
 function filterByDebut(year) {
-  var player = [];
+  var p = [];
   for (let i = 0; i < players.length; i++) {
     if (players[i].debut == year) {
-      player.push(players[i]);
+      p.push(players[i]);
     }
   }
-  return player;
+  return p;
 }
 
 //Progression 4 - Filter players that play at the position _______
 function filterByPosition(position) {
-  var player = [];
+  var p = [];
 
   for (let i = 0; i < players.length; i++) {
     if (players[i].position == position) {
-      player.push(players[i]);
+      p.push(players[i]);
     }
   }
 
-  return player;
+  return p;
 
 }
 
 //Progression 5 - Filter players that have won ______ award
 function filterByAward(awardName) {
-  var player = [];
+  var p = [];
 
   for (let i = 0; i < players.length; i++) {
     for (let j = 0; j < players[i].awards.length; j++) {
 
 
       if (players[i].awards[j].name == awardName) {
-        player.push(players[i]);
+        p.push(players[i]);
       }
     }
   }
 
-  return player;
+  return p;
 
 
 }
@@ -114,7 +114,7 @@ function filterByAward(awardName) {
 }
 */
 function filterByAwardxTimes(awardName, noOfTimes) {
-  var player = [];
+  var p = [];
 
   for (let i = 0; i < players.length; i++) {
     var count = 0;
@@ -123,60 +123,60 @@ function filterByAwardxTimes(awardName, noOfTimes) {
         count++;
     }
     if (count == noOfTimes)
-      player.push(players[i]);
+      p.push(players[i]);
   }
-  return player;
+  return p;
 }
 
 //Progression 7 - Filter players that won ______ award and belong to ______ country
 function filterByAwardxCountry(awardName, country) {
-  var player = [];
+  var p = [];
   for (var i = 0; i < players.length; i++) {
     for (var j = 0; j < players[i].awards.length; j++) {
       if (players[i].awards[j].name == awardName && players[i].country == country) {
-        player.push(players[i])
+        p.push(players[i])
       }
     }
   }
-  return player;
+  return p;
 }
 //Progression 8 - Filter players that won atleast ______ awards, belong to ______ team and are younger than ____
 function filterByNoOfAwardsxTeamxAge(noOfAwards, team, age) {
 
-  var player = [];
+  var p = [];
   for (var i = 0; i < players.length; i++) {
     if (
       players[i].awards.length >= noOfAwards &&
       players[i].team == team &&
       players[i].age < age
     ) {
-      player.push(players[i])
+      p.push(players[i])
     }
   }
-  return player;
+  return p;
 }
 
 //Progression 9 - Sort players in descending order of their age
 function SortByAge() {
-  var player = [];
+  var p = [];
 
-  player = Object.age(players).sort()
-  return player.reverse();
+  p = Object.age(players).sort()
+  return p.reverse();
 }
 
 //Progression 10 - Sort players beloging to _____ team in descending order of awards won
 function FilterByTeamxSortByNoOfAwards(team) {
-  var player = [];
-  var sortedPlayer = [];
+  var p = [];
+  var sp = [];
   var i = 0;
   for (let x of players) {
     if (x.team == team) {
-      player[i++] = x;
+      p[i++] = x;
 
     }
   }
-  sortedPlayer = player.awards.length.sort()
-  return sortedPlayer.reverse();
+  sp = p.awards.length.sort()
+  return sp.reverse();
 }
 //Challenge 1 - Sort players that have won _______ award _____ times and belong to _______ country in alphabetical order of their names
 
