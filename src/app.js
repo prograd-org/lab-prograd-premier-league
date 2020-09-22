@@ -4,7 +4,49 @@ let managerAge = 78;
 let currentTeam = "Manchester FC";
 let trophiesWon = 27;
 
+function createManager(managerName, managerAge, currentTeam, trophiesWon) {
+  let arr = [managerName, managerAge, currentTeam, trophiesWon];
+  return arr;
+}
+
 //Write your function here
+function createFormation() {
+  let expectedResult = createFormation([2, 3]);
+  return expectedResult;
+}
+
+function filterByDebut(year) {
+  let obj = players.filter(function () {
+    return players.debut = this.year;
+  });
+  return obj;
+}
+
+function filterByPosition(position) {
+  return players.filter(function () {
+    return players.position = this.position;
+  });
+}
+
+function filterByAward(awardName) {
+  return players.filter(function () {
+    return players.awards.name = awardName;
+  });
+}
+
+function filterByAwardxTimes(awardName, noOfTimes) {}
+
+function filterByAwardxTimes(awardName, country) {}
+
+function filterByNoOfAwardsxTeamxAge(noOfAwards, team, age) {}
+
+function SortByAge() {}
+
+function FilterByTeamxSortByNoOfAwards() {}
+
+function SortByNamexAwardxTimes(awardName, noOfTimes, country) {}
+
+function SortByNamexOlderThan() {}
 
 // Don't edit the following code
 try {
