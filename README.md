@@ -75,7 +75,7 @@ Now that we've got players that have won an award, we need to find out how many 
 
 ### Progression 7: But, where do you come from?
 
-Alex prefers some countries over others. That doesn't mean he's willing to ignore achievements. Why? Well, let's not get into details. Create a function `filterByAwardxTimes` which takes `awardName, country` as arguments and _returns an array of player objects_ that have won a specific award and belong to the given country.
+Alex prefers some countries over others. That doesn't mean he's willing to ignore achievements. Why? Well, let's not get into details. Create a function `filterByAwardxTimes` which takes `wardNamae, country` as arguments and _returns an array of player objects_ that have won a specific award and belong to the given country.
 
 ### Progression 8: This, that and then some more...
 
