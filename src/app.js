@@ -3,7 +3,10 @@ let managerName = "Alex Ferguson";
 let managerAge = 78;
 let currentTeam = "Manchester FC";
 let trophiesWon = 27;
-
+function createManager(managerName,managerAge,currentTeam,trophiesWon){
+   var managerDetails=new Array(managerName,managerAge,currentTeam,trophiesWon);
+   return managerDetails;
+}
 //Write your function here
 
 // Don't edit the following code
@@ -20,9 +23,19 @@ try {
 
 //Progression 2 - create a formation object and return it
 var formation = [4, 4, 3];
-
 //write your function here
-
+function createFormation(formation){
+  for(var x=0;x<formation.length;x++){
+    if(typeOf(formation[x])===undefined){
+      return undefined;
+    }
+}
+if(formation.length==0){
+  return null;
+}
+}
+createFormation(2,3,1);
+createFormation(2,4,5);
 // Dont edit the following code
 
 try {
@@ -32,8 +45,29 @@ try {
 }
 
 //Progression 3 - Filter players that debuted in ___ year
-
+function filterByDebut(year){
+  var yr=year;
+  var playernames=new Array();
+  for(var x=0;x<players.length;x++){
+  if(yr==players[x].debut){
+    playernames.push(players[x]);
+  }
+  return players[x];
+}
+if(playernames.length==0){
+  return playernames;
+  }
+}
 //Progression 4 - Filter players that play at the position _______
+function filterByPosition(position){
+  var playerPositions=[];
+  for(var x=0;x<players.length;x++){
+    if(position==players[x].position){
+      playerPositions.push(players[x]);
+      return playernames;
+    }
+  }
+}
 
 //Progression 5 - Filter players that have won ______ award
 
