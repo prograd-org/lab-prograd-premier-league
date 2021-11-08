@@ -19,10 +19,10 @@ try {
     trophiesWon
   );
 } catch (e) {
-  // do nothing - expected error
+  // do nothing - expected error..
 }
 
-//Progression 2 - create a formation object and return it
+//Progression 2 - create a formation object and return it..
 var formation = [4, 4, 3];
 
 //write your function here
