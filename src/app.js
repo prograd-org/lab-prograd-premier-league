@@ -32,14 +32,93 @@ try {
 }
 
 //Progression 3 - Filter players that debuted in ___ year
+function filterByDebut(year){
+ 
+  var result=players.filter((player)=>
+       player.debut==year
+  )
+  return result
+}
 
 //Progression 4 - Filter players that play at the position _______
+function filterByPosition(position){
+     var result=[]
+     if(position===undefined)
+     return result
+     result=players.filter((player)=>player.position===position)
+     return result
+
+}
 
 //Progression 5 - Filter players that have won ______ award
+function filterByAward(award){
+  var result=[]
+  if(award===undefined)
+  return result 
+  for(let index=0;index<players.length;index++){
+    for(let index1=0;index1<players[index].awards.length;index1++){
+      if(players[index].awards[index1].name===award){
+        result.push(players[index])
+        break;
+      }
+    }
+  }
+  return result;
+}
 
 //Progression 6 - Filter players that won ______ award ____ times
+function filterByAwardxCountry(award,country){
+  var result=[]
+  
+for(let index=0;index<players.length;index++){
+  if(players[index].country===country){
+    for(let index1=0;index1<players[index].awards.length;index1++){
+      if(players[index].awards[index1].name===award){
+        result.push(players[index])
+        break;
+      }
+    }
+  }
+}
+
+  return result;
+}
+
+function filterByAwardxTimes(award,count){
+  var result=[]
+  if(award===undefined)
+  return result 
+  for(let index=0;index<players.length;index++){
+    let countOfAwards=0
+    for(let index1=0;index1<players[index].awards.length;index1++){
+      if(players[index].awards[index1].name===award)
+      countOfAwards++;
+       
+     
+  
+    }
+    if(countOfAwards===count)
+    result.push(players[index])
+  }
+  return result;
+}
 
 //Progression 7 - Filter players that won ______ award and belong to ______ country
+function filterByNoOfAwardsxTeamxAge(noOfAwards,team,age){
+  var result=[]
+ 
+  for(let index=0;index<players.length;index++){
+     if(players[index].awards.length>=noOfAwards && players[index].team===team && players[index].age<age)
+     result.push(players[index])
+      
+       
+     
+  
+    
+    
+  }
+  return result;
+}
 
 //Progression 8 - Filter players that won atleast ______ awards, belong to ______ team and are younger than ____
 
